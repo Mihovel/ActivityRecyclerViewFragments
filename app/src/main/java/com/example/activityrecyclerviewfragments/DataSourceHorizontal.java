@@ -1,16 +1,13 @@
 package com.example.activityrecyclerviewfragments;
 
 import android.util.Log;
+
 import androidx.annotation.NonNull;
+
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataSourceHorizontal {
-    private final List<Data> listOfData;
-
-    private DataSourceHorizontal() {
-        listOfData = getListOfDataByCount(100);
-    }
 
     public static class Data {
         String text1;
@@ -56,14 +53,5 @@ public class DataSourceHorizontal {
                     String.valueOf(i + 2), String.valueOf(i + 3)));
         }
         return resultList;
-    }
-
-    private static DataSourceHorizontal currentInstance;
-
-    public synchronized static DataSourceHorizontal getInstance() {
-        if (currentInstance == null) {
-            currentInstance = new DataSourceHorizontal();
-        }
-        return currentInstance;
     }
 }

@@ -59,8 +59,6 @@ class ViewHolderTexts extends RecyclerView.ViewHolder {
         Bundle bundle = new Bundle();
         bundle.putString(NUMBER, s);
         showNumberFragment.setArguments(bundle);
-
-        //Не понимаю, почему не работает addToBackStack
         AppCompatActivity appCompatActivity = (AppCompatActivity) currentContext;
         FragmentManager fragmentManager = appCompatActivity.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();

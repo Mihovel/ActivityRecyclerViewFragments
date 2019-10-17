@@ -12,8 +12,6 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-import static com.example.activityrecyclerviewfragments.MainActivity.MAIN_ACTIVITY;
-
 public class ViewHolderHorizontal extends RecyclerView.ViewHolder {
 
     public static final String NUMBER = "NUMBER";
@@ -73,13 +71,11 @@ public class ViewHolderHorizontal extends RecyclerView.ViewHolder {
         Bundle bundle = new Bundle();
         bundle.putString(NUMBER, putNumber);
         showNumberFragment.setArguments(bundle);
-
-        //Не понимаю, почему не работает addToBackStack
         AppCompatActivity appCompatActivity = (AppCompatActivity) currentContext;
         FragmentManager fragmentManager = appCompatActivity.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, showNumberFragment);
-        fragmentTransaction.addToBackStack(null);
+        //fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }
