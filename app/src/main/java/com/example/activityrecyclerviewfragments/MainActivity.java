@@ -1,6 +1,8 @@
 package com.example.activityrecyclerviewfragments;
 
 import android.os.Bundle;
+
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,4 +17,5 @@ public class MainActivity extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(
                 R.id.container, new ListOfNumbersFragment()).commit();
     }
+
 }

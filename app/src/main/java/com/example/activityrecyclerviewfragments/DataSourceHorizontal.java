@@ -33,10 +33,6 @@ public class DataSourceHorizontal {
         }
     }
 
-    public List<Data> getListOfData() {
-        return listOfData;
-    }
-
     public static List<Data> getListOfDataByCount(int n) {
         List<Data> resultList = new ArrayList<>();
         for (int i = 1; i <= n; i += 4) {
