@@ -75,7 +75,7 @@ public class ViewHolderHorizontal extends RecyclerView.ViewHolder {
         FragmentManager fragmentManager = appCompatActivity.getSupportFragmentManager();
         FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.replace(R.id.container, showNumberFragment);
-        //fragmentTransaction.addToBackStack(null);
+        fragmentTransaction.addToBackStack(null);
         fragmentTransaction.commit();
     }
 }
