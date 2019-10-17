@@ -12,9 +12,9 @@ import java.util.List;
 
 public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolderTexts> {
 
-    public List<DataSource.Data> myData;
+    private List<DataSource.Data> myData;
 
-    public RecyclerViewAdapter(List<DataSource.Data> myData) {
+    RecyclerViewAdapter(List<DataSource.Data> myData) {
         this.myData = myData;
     }
 
@@ -53,7 +53,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<ViewHolderTexts> {
         }
     }
 
-    public void notifyData(List<DataSource.Data> list) {
+    void notifyData(List<DataSource.Data> list) {
         this.myData = list;
         notifyDataSetChanged();
     }

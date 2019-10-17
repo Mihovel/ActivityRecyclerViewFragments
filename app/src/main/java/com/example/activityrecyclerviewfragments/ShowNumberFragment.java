@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
+import java.util.Objects;
+
 import static com.example.activityrecyclerviewfragments.ViewHolderTexts.NUMBER;
 
 public class ShowNumberFragment extends AbstractFragment {
@@ -24,8 +26,9 @@ public class ShowNumberFragment extends AbstractFragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Bundle incomeNumber = getArguments();
-        String number = incomeNumber.getString(NUMBER);
+        String number = Objects.requireNonNull(incomeNumber).getString(NUMBER);
         ((TextView) view.findViewById(R.id.showNumber)).setText(number);
+        assert number != null;
         if (Integer.parseInt(number) % 2 == 1) {
             ((TextView) view.findViewById(R.id.showNumber)).setTextColor(Color.BLUE);
         } else {

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="horizontal"
@@ -8,16 +9,19 @@
     <Button
         android:id="@+id/leftNumberButton"
         android:layout_width="@dimen/lengthOfButtons"
-        android:layout_height="@dimen/HeightOfNumberAndButtons" />
+        android:layout_height="@dimen/HeightOfNumberAndButtons"
+        tools:ignore="ButtonStyle" />
 
     <Button
         android:id="@+id/middleNumberButton"
         android:layout_width="@dimen/lengthOfButtons"
-        android:layout_height="@dimen/HeightOfNumberAndButtons" />
+        android:layout_height="@dimen/HeightOfNumberAndButtons"
+        tools:ignore="ButtonStyle" />
 
     <Button
         android:id="@+id/rightNumberButton"
         android:layout_width="@dimen/lengthOfButtons"
-        android:layout_height="@dimen/HeightOfNumberAndButtons" />
+        android:layout_height="@dimen/HeightOfNumberAndButtons"
+        tools:ignore="ButtonStyle" />
 
 </LinearLayout>

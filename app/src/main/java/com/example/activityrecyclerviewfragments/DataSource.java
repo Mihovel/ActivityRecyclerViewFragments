@@ -5,14 +5,14 @@ import androidx.annotation.NonNull;
 import java.util.ArrayList;
 import java.util.List;
 
-public class DataSource {
+class DataSource {
 
     public static class Data {
         String leftText;
         String middleText;
         String rightText;
 
-        public Data(String leftText, String middleText, String rightText) {
+        Data(String leftText, String middleText, String rightText) {
             this.leftText = leftText;
             this.middleText = middleText;
             this.rightText = rightText;
@@ -25,7 +25,7 @@ public class DataSource {
         }
     }
 
-    public static List<Data> getListOfDataByCount(int n) {
+    static List<Data> getListOfDataByCount(int n) {
         List<Data> resultList = new ArrayList<>();
         for (int i = 1; i <= n; i += 3) {
             if ((n % 3 == 1) && (i == n)) {

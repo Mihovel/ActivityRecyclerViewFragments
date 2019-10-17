@@ -12,19 +12,22 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.List;
+import java.util.Objects;
 
 public class ListOfNumbersFragment extends AbstractFragment {
 
     private static int countOfNumbers = 100;
-    RecyclerViewAdapter recyclerViewAdapter;
-    RecyclerViewAdapterHorizontal recyclerViewAdapterHorizontal;
+    private RecyclerViewAdapter recyclerViewAdapter;
+    private RecyclerViewAdapterHorizontal recyclerViewAdapterHorizontal;
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View inflate = inflater.inflate(R.layout.list_of_numbers_fragment, container, false);
+        View inflate = inflater.
+                inflate(R.layout.list_of_numbers_fragment, container, false);
         final RecyclerView recyclerView = inflate.findViewById(R.id.listOfNumbers);
-        int orientation = this.getActivity().getResources().getConfiguration().orientation;
+        int orientation = Objects.requireNonNull(this.getActivity()).getResources().
+                getConfiguration().orientation;
         if (orientation == Configuration.ORIENTATION_PORTRAIT) {
             recyclerViewAdapter = new RecyclerViewAdapter(DataSource.
                     getListOfDataByCount(countOfNumbers));

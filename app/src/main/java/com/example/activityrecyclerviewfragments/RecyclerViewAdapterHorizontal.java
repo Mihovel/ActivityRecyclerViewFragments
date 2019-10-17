@@ -12,9 +12,9 @@ import java.util.List;
 
 public class RecyclerViewAdapterHorizontal extends RecyclerView.Adapter<ViewHolderHorizontal> {
 
-    public List<DataSourceHorizontal.Data> myData;
+    private List<DataSourceHorizontal.Data> myData;
 
-    public RecyclerViewAdapterHorizontal(List<DataSourceHorizontal.Data> myData) {
+    RecyclerViewAdapterHorizontal(List<DataSourceHorizontal.Data> myData) {
         this.myData = myData;
     }
 
@@ -48,7 +48,7 @@ public class RecyclerViewAdapterHorizontal extends RecyclerView.Adapter<ViewHold
         holder.button4.setTextColor(Color.RED);
     }
 
-    public void notifyData(List<DataSourceHorizontal.Data> list) {
+    void notifyData(List<DataSourceHorizontal.Data> list) {
         this.myData = list;
         notifyDataSetChanged();
     }

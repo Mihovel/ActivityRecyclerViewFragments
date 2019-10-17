@@ -16,7 +16,7 @@ public class DataSourceHorizontal {
         String text4;
 
 
-        public Data(String text1, String text2, String text3, String text4) {
+        Data(String text1, String text2, String text3, String text4) {
             this.text1 = text1;
             this.text2 = text2;
             this.text3 = text3;
@@ -30,7 +30,7 @@ public class DataSourceHorizontal {
         }
     }
 
-    public static List<Data> getListOfDataByCount(int n) {
+    static List<Data> getListOfDataByCount(int n) {
         List<Data> resultList = new ArrayList<>();
         for (int i = 1; i <= n; i += 4) {
             if ((n % 4 == 1) && (i == n)) {

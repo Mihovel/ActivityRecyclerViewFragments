@@ -7,21 +7,20 @@ import android.widget.Button;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class ViewHolderHorizontal extends RecyclerView.ViewHolder {
+class ViewHolderHorizontal extends RecyclerView.ViewHolder {
 
-    public static final String NUMBER = "NUMBER";
-    public final Button button1;
-    public final Button button2;
-    public final Button button3;
-    public final Button button4;
-    public Context currentContext = itemView.getContext();
+    private static final String NUMBER = "NUMBER";
+    final Button button1;
+    final Button button2;
+    final Button button3;
+    final Button button4;
+    private Context currentContext = itemView.getContext();
 
-    public ViewHolderHorizontal(@NonNull final View itemView) {
+    ViewHolderHorizontal(@NonNull final View itemView) {
         super(itemView);
         button1 = itemView.findViewById(R.id.button1);
         button2 = itemView.findViewById(R.id.button2);
@@ -66,7 +65,7 @@ public class ViewHolderHorizontal extends RecyclerView.ViewHolder {
         });
     }
 
-    public void toShowNumberFragment(String putNumber) {
+    private void toShowNumberFragment(String putNumber) {
         ShowNumberFragment showNumberFragment = new ShowNumberFragment();
         Bundle bundle = new Bundle();
         bundle.putString(NUMBER, putNumber);
